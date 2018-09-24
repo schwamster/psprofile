@@ -5,6 +5,12 @@ function google{
     Start-Process $query
 }
 
+function g{
+    param([string] $query)
+    google($query)
+}
+
+
 function touch{
     param([string] $fileName)
     "" > $fileName
@@ -15,6 +21,11 @@ function toucho{
     "" > $fileName
     $fileName = "./" + $fileName
     code $fileName
+}
+
+function o{
+    param([string] $url)
+    open($url)
 }
 
 function open{
@@ -28,7 +39,7 @@ function open{
         $url = "https://www.spiegel.de"
     }
 
-    if($url -eq "github"){
+    if($url -eq "git"){
         $url = "https://github.com"
     }
 
