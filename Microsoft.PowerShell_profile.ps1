@@ -5,6 +5,18 @@ function google{
     Start-Process $query
 }
 
+function touch{
+    param([string] $fileName)
+    "" > $fileName
+}
+
+function toucho{
+    param([string] $fileName)
+    "" > $fileName
+    $fileName = "./" + $fileName
+    code $fileName
+}
+
 function open{
     param([string] $url)
     
